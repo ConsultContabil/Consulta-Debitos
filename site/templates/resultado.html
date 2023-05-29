@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resultado da Extração</title>
+    <style>
+        table {
+            width: 500px;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #000;
+            text-align: left;
+        }
+        th {
+            background-color: #e1e6f3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Resultado da Extração</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome do Débito</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in tabela %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
